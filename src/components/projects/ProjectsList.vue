@@ -1,8 +1,8 @@
 <script>
-import PostCard from './PostCard.vue';
+import ProjectCard from './ProjectCard.vue';
 export default {
     name: 'ProjectsList',
-    components: { PostCard },
+    components: { ProjectCard },
     props: { projects: Array }
 };
 
@@ -11,7 +11,7 @@ export default {
 <template>
     <section id="projects-list" class="my-4">
         <div v-if="projects.length">
-            <PostCard v-for="project in projects" :key="project.id" :project="project" />
+            <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
         </div>
         <h4 v-else class="text-center">Non ci sono Progetti</h4>
     </section>
